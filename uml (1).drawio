@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.0">
+  <diagram name="Page-1" id="egrpQ5QIgeHJ1-h-rmVr">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="2000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Methods:&amp;nbsp;&lt;div&gt;void createRecipe() {}&lt;/div&gt;&lt;div&gt;void searchAndOpenRecipe() {}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="470" x="40" y="-1960" as="geometry" />
+        </mxCell>
+        <mxCell id="5V9un_61jcX-6siz5nd1-15" edge="1" parent="1" source="_sQd77YgcLiYgdhUDUK2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" target="OEqJe8zwGwT64Cp752vX-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="150" width="470" x="40" y="-1660" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;RecipeBook&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="110" y="-1950" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Recipe&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="70" y="-1650" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="350" width="250" x="150" y="-1430" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Ingredient&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="245" y="-1420" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-7" edge="1" parent="1" source="_sQd77YgcLiYgdhUDUK2-5" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=flexArrow;endWidth=14;endSize=12.33;width=4;" target="_sQd77YgcLiYgdhUDUK2-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points" />
+            <mxPoint x="350" y="-1370" as="sourcePoint" />
+            <mxPoint x="200" y="-1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ArrayList&amp;lt;Ingredient&amp;gt; ingredientList;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;String recipeName;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;int id;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;i&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Methods:&lt;/font&gt;&lt;/b&gt;&lt;/i&gt;&lt;/u&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;b&gt;void printIngredients() {}&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="410" x="50" y="-1600" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="String name;&lt;div&gt;QuantityTypes types;&lt;br&gt;&lt;div&gt;int quantity;&lt;/div&gt;&lt;div&gt;String txtQuantity;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="140" x="205" y="-1370" as="geometry" />
+        </mxCell>
+        <mxCell id="_sQd77YgcLiYgdhUDUK2-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="int year;&lt;div&gt;String author;&lt;/div&gt;&lt;div&gt;String title;&lt;/div&gt;&lt;div&gt;Arraylist&amp;lt;Recipe&amp;gt; recipeList;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="60" y="-1910" as="geometry" />
+        </mxCell>
+        <mxCell id="5V9un_61jcX-6siz5nd1-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="160" x="450" y="-1330" as="geometry" />
+        </mxCell>
+        <mxCell id="5V9un_61jcX-6siz5nd1-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="enum QuantityTypes" vertex="1">
+          <mxGeometry height="20" width="140" x="460" y="-1325" as="geometry" />
+        </mxCell>
+        <mxCell id="5V9un_61jcX-6siz5nd1-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="cup, tea spoon, table spoon, unit, pinch" vertex="1">
+          <mxGeometry height="10" width="160" x="450" y="-1295" as="geometry" />
+        </mxCell>
+        <mxCell id="5V9un_61jcX-6siz5nd1-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Methods:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;public Ingredient() {}&lt;/div&gt;&lt;div&gt;public String getName() {}&lt;/div&gt;&lt;div&gt;public QuantityTypes getType() {}&lt;/div&gt;&lt;div&gt;public int getQuantity() {}&lt;/div&gt;&lt;div&gt;public getTextQuantity() {}&lt;/div&gt;&lt;div&gt;public void setQuantity() {}&lt;/div&gt;&lt;div&gt;public void setQuantityType() {}&lt;/div&gt;&lt;div&gt;&lt;b&gt;public String createTextQuantity() {}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;void&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="230" x="160" y="-1300" as="geometry" />
+        </mxCell>
+        <mxCell id="OEqJe8zwGwT64Cp752vX-2" edge="1" parent="1" source="_sQd77YgcLiYgdhUDUK2-5" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;edgeStyle=elbowEdgeStyle;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="5V9un_61jcX-6siz5nd1-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="420" y="-1650" as="sourcePoint" />
+            <mxPoint x="420" y="-1680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OEqJe8zwGwT64Cp752vX-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Methods:&lt;/b&gt;&lt;div&gt;&lt;b&gt;void printSteps() {}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;void addStep(String step, int index) {}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;void addStepToLast(String step) {}&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;void removeStep(int index) {}&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="250" x="600" y="-1760" as="geometry" />
+        </mxCell>
+        <mxCell id="OEqJe8zwGwT64Cp752vX-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 30px;&quot;&gt;Instruction&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="695" y="-1750" as="geometry" />
+        </mxCell>
+        <mxCell id="OEqJe8zwGwT64Cp752vX-6" edge="1" parent="1" source="OEqJe8zwGwT64Cp752vX-3" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shape=flexArrow;endWidth=14;endSize=12.33;width=4;" target="_sQd77YgcLiYgdhUDUK2-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="-1410" as="sourcePoint" />
+            <mxPoint x="410" y="-1480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OEqJe8zwGwT64Cp752vX-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="String instruction;&lt;div&gt;ArrayList&amp;lt;String&amp;gt; stepsList;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="185" x="632.5" y="-1720" as="geometry" />
+        </mxCell>
+        <mxCell id="5V9un_61jcX-6siz5nd1-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;&lt;i&gt;&lt;u&gt;Pass ingredientList to Instruction&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="510" y="-1710" as="geometry" />
+        </mxCell>
+        <mxCell id="OEqJe8zwGwT64Cp752vX-10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=flexArrow;endWidth=6.414277988101676;endSize=4;width=4.4186046511627906;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="275" y="-1660" as="sourcePoint" />
+            <mxPoint x="274.93" y="-1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
