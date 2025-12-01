@@ -7,27 +7,50 @@
  */
 public class Ingredient
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    String name;
+    QuantityTypes types;
+    int quantity;
+    String txtQuantity;
 
-    /**
-     * Constructor for objects of class Ingredient
-     */
-    public Ingredient()
+    public Ingredient(String name, QuantityTypes types, int quantity)
     {
-        // initialise instance variables
-        x = 0;
+        this.name = name;
+        this.types = types;
+        this.quantity = quantity;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public String getName()
     {
-        // put your code here
-        return x + y;
+        return name;
+    }
+
+    public QuantityTypes getType()
+    {
+        return types;
+    }
+
+    public int getQuantity()
+    {
+        return quantity;
+    }
+
+    public String getTXTQuantity()
+    {
+        return txtQuantity;
+    }
+
+    public void setQuantity(int quantity)
+    {
+        this.quantity = quantity;
+    }
+
+    public void setQuantityType(QuantityTypes types)
+    {
+        this.types = types;
+    }
+
+    public String createTextQuantity()
+    {
+        return (quantity + " " + types);
     }
 }
