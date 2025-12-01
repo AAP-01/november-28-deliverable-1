@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=Ingredient
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ingredient\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=name\ types\ quantity
+comment1.target=Ingredient(java.lang.String,\ QuantityTypes,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=QuantityTypes\ getType()
+comment4.params=
+comment4.target=int\ getQuantity()
+comment5.params=
+comment5.target=java.lang.String\ getTXTQuantity()
+comment6.params=quantity
+comment6.target=void\ setQuantity(int)
+comment7.params=types
+comment7.target=void\ setQuantityType(QuantityTypes)
+comment8.params=
+comment8.target=java.lang.String\ createTextQuantity()
+numComments=9
