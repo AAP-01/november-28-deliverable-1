@@ -1,33 +1,18 @@
+import java.util.ArrayList;
 
-/**
- * Write a description of class Recipe here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Recipe
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    ArrayList<Ingredient> ingredientList;
+    String recipeName;
+    int id;
 
-    /**
-     * Constructor for objects of class Recipe
-     */
     public Recipe()
     {
-        // initialise instance variables
-        x = 0;
-    }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    }
+    
+    public void printIngredients()
     {
-        // put your code here
-        return x + y;
+
     }
 }
