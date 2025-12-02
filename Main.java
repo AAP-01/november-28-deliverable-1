@@ -5,5 +5,6 @@ public class Main {
         start.addIngredient(new Ingredient("Sugar", QuantityTypes.tableSpoon, 3));
         start.addIngredient(new Ingredient("Flour", QuantityTypes.cup, 2));
         start.printIngredients();
+        start.saveRecipe();
     }
 }

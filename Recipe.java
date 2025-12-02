@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.io.File;       // Import the File class
+import java.io.IOException; // Import IOException to handle errors
+import java.io.FileWriter;   // Import the FileWriter class
+import java.io.IOException;  // Import the IOException class
 
 public class Recipe
 {
@@ -26,8 +30,43 @@ public class Recipe
         
     }
 
+    private String saveIngredients()
+    {
+        if (ingredientList != null)
+        {
+            String saveInfo = "";
+            for (Ingredient ingredient: ingredientList)
+            {
+                saveInfo = saveInfo + "- " + ingredient.getIngredientText() + "\n";
+            }
+
+            return saveInfo;
+        }
+
+        return null;
+        
+    }
+
     public void addIngredient(Ingredient ingredient) 
     {
         ingredientList.add(ingredient);
+    }
+
+    public void saveRecipe() 
+    {
+        try {
+        File myObj = new File(recipeName + ".txt"); // Create File object
+        if (myObj.createNewFile()) {           // Try to create the file
+            System.out.println("File created: " + myObj.getName());
+            FileWriter myWriter = new FileWriter(recipeName + ".txt");
+            myWriter.write(saveIngredients());
+            myWriter.close();
+        } else {
+            System.out.println("File already exists.");
+        }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace(); // Print error details
+        }
     }
 }
