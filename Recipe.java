@@ -7,7 +7,7 @@ import java.io.IOException;  // Import the IOException class
 public class Recipe
 {
     ArrayList<Ingredient> ingredientList;
-    String recipeName;
+    public String recipeName;
     int id;
 
     public Recipe(int id, String recipeName)
