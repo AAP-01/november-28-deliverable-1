@@ -72,7 +72,7 @@ public class RecipeBook
         }
     }
     
-    public void printRecipes()
+    public void printRecipes()//shows all added recipes in the terminal
     {
         for(Recipe recipe : recipeList)
         {

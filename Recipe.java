@@ -9,9 +9,10 @@ public class Recipe
     ArrayList<Ingredient> ingredientList;
     ArrayList<Instruction> instructionList;
     public String recipeName;
-    int id;
+    int id;//not relevant to user, for reference to us
+    RecipeType recipeTypes;
 
-    public Recipe(int id, String recipeName)
+    public Recipe(int id, String recipeName, RecipeType recipeTypes)
     {
         this.id = id;
         this.recipeName = recipeName;
@@ -20,7 +21,7 @@ public class Recipe
         System.out.println("Created: " + recipeName + ", ID: " + id);
     }
     
-    public void printIngredients()
+    public void printIngredients()//recipe book uses this
     {
         if (ingredientList != null)
         {
@@ -29,10 +30,9 @@ public class Recipe
                 System.out.println(ingredient.getIngredientText());
             }
         }
-        
     }
 
-    public void printInstructions()
+    public void printInstructions()//recipe book uses this
     {
         if (instructionList != null)
         {
@@ -43,7 +43,7 @@ public class Recipe
         }
     }
     
-    private String saveIngredients()
+    private String saveIngredients()//for vscode functionality(?)
     {
         if (ingredientList != null)
         {
@@ -55,22 +55,20 @@ public class Recipe
 
             return saveInfo;
         }
-
         return null;
-        
     }
 
-    public void addIngredient(Ingredient ingredient) 
+    public void addIngredient(Ingredient ingredient)//adds an ingredient object (contains one ingredient)
     {
         ingredientList.add(ingredient);
     }
     
-    public void addInstruction(Instruction instruction) 
+    public void addInstruction(Instruction instruction)//adds an instruction object(contains the steps)
     {
         instructionList.add(instruction);
     }
 
-    public void saveRecipe() 
+    public void saveRecipe()//ignore, for vscode functionality
     {
         try {
         File myObj = new File("RecipeData//" + recipeName + ".txt"); // Create File object

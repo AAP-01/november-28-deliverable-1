@@ -7,8 +7,11 @@
  */
 public class Desert extends Recipe
 {
-    public Desert(int id, String recipeName)
+    boolean isFrozen;
+    
+    public Desert(int id, String recipeName, RecipeType recipeTypes, boolean isFrozen)
     {
-        super(id, recipeName);
+        super(id, recipeName, recipeTypes);
+        this.isFrozen = isFrozen;
     }
 }
