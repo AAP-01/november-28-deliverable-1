@@ -16,7 +16,7 @@ public class Instruction
         stepsList = new ArrayList<>();
     }
     
-    public void printSteps()
+    public void printSteps()//shows the added steps in terminal
     {
         int index = 1;
         for(String step : stepsList)
@@ -28,17 +28,16 @@ public class Instruction
     
     public String getSteps()
     {
-           int index = 1;
-            String info = "";
-            for (String step : stepsList)
-            {
-                info = info + "- " + index + ". " + step + "\n";
-            }
-
-            return info;
+        int index = 1;
+        String info = "";
+        for (String step : stepsList)
+        {
+            info = info + "- " + index + ". " + step + "\n";
+        }
+        return info;
     }
 
-    public void addStep(String step, int index)
+    public void addStep(String step, int index)//add a step in a particular position (ie manually)
     {
         stepsList.add(index, step);
     }
