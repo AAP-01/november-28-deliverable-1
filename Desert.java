@@ -7,8 +7,8 @@
  */
 public class Desert extends Recipe
 {
-    public Desert(int id, String recipeName)
+    public Desert(int id, String recipeName, RecipeType recipeTypes)
     {
-        super(id, recipeName);
+        super(id, recipeName, recipeTypes);
     }
 }

@@ -9,9 +9,10 @@ public class Recipe
     ArrayList<Ingredient> ingredientList;
     ArrayList<Instruction> instructionList;
     public String recipeName;
-    int id;//not shown to user, for reference to us
+    int id;//not relevant to user, for reference to us
+    RecipeType recipeTypes;
 
-    public Recipe(int id, String recipeName)
+    public Recipe(int id, String recipeName, RecipeType recipeTypes)
     {
         this.id = id;
         this.recipeName = recipeName;

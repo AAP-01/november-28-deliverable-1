@@ -7,8 +7,8 @@
  */
 public class Drink extends Recipe
 {
-    public Drink(int id, String recipeName)
+    public Drink(int id, String recipeName, RecipeType recipeTypes)
     {
-        super(id, recipeName);
+        super(id, recipeName, recipeTypes);
     }
 }
