@@ -14,11 +14,16 @@ public class RecipeBook
         recipeList = new ArrayList<>();
     }
 
-    public void createRecipe(Recipe recipe)
+    public void addRecipe(Recipe recipe)
     {
         recipeList.add(recipe);
     }
 
+    public void createRecipe(Recipe recipe)
+    {
+        recipeList.add(recipe);
+    }
+    
     public void searchAndOpenRecipe(String name)
     {
         if(!recipeList.isEmpty())
