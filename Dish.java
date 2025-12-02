@@ -9,6 +9,4 @@ public class Dish extends Recipe
         super(id, recipeName, recipeTypes);
         this.isVegeterian = isVegeterian;
     }
-
-
 }
