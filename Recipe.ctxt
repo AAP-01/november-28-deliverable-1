@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=Recipe
-comment1.params=
-comment1.target=Recipe()
+comment1.params=id\ recipeName
+comment1.target=Recipe(int,\ java.lang.String)
 comment2.params=
 comment2.target=void\ printIngredients()
-numComments=3
+comment3.params=ingredient
+comment3.target=void\ addIngredient(Ingredient)
+numComments=4

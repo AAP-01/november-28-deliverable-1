@@ -9,11 +9,11 @@ import java.util.ArrayList;
 public class Instruction
 {
     String instruction;
-    ArrayList<String> stepsList = new ArrayList<>();
+    ArrayList<String> stepsList;
 
     public Instruction()
     {
-        
+        stepsList = new ArrayList<>();
     }
     
     public void printSteps()
