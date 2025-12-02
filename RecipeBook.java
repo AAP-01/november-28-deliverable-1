@@ -33,6 +33,7 @@ public class RecipeBook
                 if (recipe.recipeName == name)
                 {
                     recipe.printIngredients();
+                    recipe.printInstructions();
                 }
             }
         }

@@ -7,6 +7,7 @@ import java.io.IOException;  // Import the IOException class
 public class Recipe
 {
     ArrayList<Ingredient> ingredientList;
+    ArrayList<Instruction> instructionList;
     public String recipeName;
     int id;
 
@@ -15,6 +16,7 @@ public class Recipe
         this.id = id;
         this.recipeName = recipeName;
         ingredientList = new ArrayList<>();
+        instructionList = new ArrayList<>();
         System.out.println("Created: " + recipeName + ", ID: " + id);
     }
     
@@ -30,6 +32,17 @@ public class Recipe
         
     }
 
+    public void printInstructions()
+    {
+        if (instructionList != null)
+        {
+            for (Instruction instruction: instructionList)
+            {
+                instruction.printSteps();
+            }
+        }
+    }
+    
     private String saveIngredients()
     {
         if (ingredientList != null)
@@ -50,6 +63,11 @@ public class Recipe
     public void addIngredient(Ingredient ingredient) 
     {
         ingredientList.add(ingredient);
+    }
+    
+    public void addInstruction(Instruction instruction) 
+    {
+        instructionList.add(instruction);
     }
 
     public void saveRecipe() 

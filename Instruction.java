@@ -25,6 +25,18 @@ public class Instruction
             index++;
         }
     }
+    
+    public String getSteps()
+    {
+           int index = 1;
+            String info = "";
+            for (String step : stepsList)
+            {
+                info = info + "- " + index + ". " + step + "\n";
+            }
+
+            return info;
+    }
 
     public void addStep(String step, int index)
     {
