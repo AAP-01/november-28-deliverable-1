@@ -55,17 +55,17 @@ public class Recipe
     public void saveRecipe() 
     {
         try {
-        File myObj = new File(recipeName + ".txt"); // Create File object
+        File myObj = new File("RecipeData//" + recipeName + ".txt"); // Create File object
         if (myObj.createNewFile()) {           // Try to create the file
             System.out.println("File created: " + myObj.getName());
-            FileWriter myWriter = new FileWriter(recipeName + ".txt");
+            FileWriter myWriter = new FileWriter("RecipeData//" + recipeName + ".txt");
             myWriter.write(saveIngredients());
             myWriter.close();
         } else {
             System.out.println("File already exists.");
         }
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Stuff Broke, Error Happened");
             e.printStackTrace(); // Print error details
         }
     }
