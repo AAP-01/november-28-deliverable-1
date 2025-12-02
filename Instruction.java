@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 /**
  * Write a description of class Instruction here.
  *
@@ -8,30 +9,35 @@ import java.util.ArrayList;
 public class Instruction
 {
     String instruction;
-    ArrayList<String> stepsList;
+    ArrayList<String> stepsList = new ArrayList<>();
 
     public Instruction()
     {
-
+        
     }
     
     public void printSteps()
     {
-
+        int index = 1;
+        for(String step : stepsList)
+        {
+            System.out.println(index + ". " + step);
+            index++;
+        }
     }
 
     public void addStep(String step, int index)
     {
-
+        stepsList.add(index, step);
     }
 
-    public void addStepToLast(String step)
+    public void addStep(String step)
     {
-
+        stepsList.add(step);
     }
 
     public void removeStep(int index)
     {
-
+        stepsList.remove(index);        
     }
 }
