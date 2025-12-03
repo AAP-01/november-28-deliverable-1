@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 /**
  * Write a description of class Instruction here.
  *
@@ -12,26 +13,42 @@ public class Instruction
 
     public Instruction()
     {
-
+        stepsList = new ArrayList<>();
     }
     
-    public void printSteps()
+    public void printSteps()//shows the added steps in terminal
     {
-
+        int index = 1;
+        for(String step : stepsList)
+        {
+            System.out.println(index + ". " + step);
+            index++;
+        }
+    }
+    
+    public String getSteps()
+    {
+        int index = 1;
+        String info = "";
+        for (String step : stepsList)
+        {
+            info = info + "- " + index + ". " + step + "\n";
+        }
+        return info;
     }
 
-    public void addStep(String step, int index)
+    public void addStep(String step, int index)//add a step in a particular position (ie manually)
     {
-
+        stepsList.add(index, step);
     }
 
-    public void addStepToLast(String step)
+    public void addStep(String step)
     {
-
+        stepsList.add(step);
     }
 
     public void removeStep(int index)
     {
-
+        stepsList.remove(index);        
     }
 }

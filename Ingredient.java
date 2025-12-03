@@ -11,6 +11,7 @@ public class Ingredient
         this.name = name;
         this.types = types;
         this.quantity = quantity;
+        createTextQuantity();
     }
 
     public String getName()
@@ -43,8 +44,13 @@ public class Ingredient
         this.types = types;
     }
 
-    public String createTextQuantity()
+    public void createTextQuantity()
     {
-        return (quantity + " " + types);
+        txtQuantity = (quantity + " " + types);
+    }
+
+    public String getIngredientText()
+    {
+        return (txtQuantity + " of " + name);
     }
 }
