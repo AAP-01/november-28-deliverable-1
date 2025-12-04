@@ -21,7 +21,7 @@ public class Instruction
         int index = 1;
         for(String step : stepsList)
         {
-            System.out.println(index + ". " + step);
+            System.out.println(index + ". " + step.replace(".", ""));
             index++;
         }
     }
@@ -32,7 +32,8 @@ public class Instruction
         String info = "";
         for (String step : stepsList)
         {
-            info = info + "- " + index + ". " + step + "\n";
+            info = info + "- - " + index + ". " + step + "\n";
+            index++;
         }
         return info;
     }

@@ -7,6 +7,6 @@
  */
 public enum QuantityTypes
 {
-    cup, teaSpoon, tableSpoon, unit, pinch
+    CUP, TEASPOON, TABLESPOON, UNIT, PINCH
     //unit is for ingredients that can't really be measured (like whole fruits)
 }

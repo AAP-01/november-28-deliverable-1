@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 import java.util.*;
+import java.io.File;       // Import the File class
+import java.io.IOException; // Import IOException to handle errors
+import java.io.FileWriter;   // Import the FileWriter class
+import java.io.IOException;  // Import the IOException class
 
 public class RecipeBook
 {
@@ -13,42 +17,76 @@ public class RecipeBook
         System.out.println(author);
         System.out.println(year);
         System.out.println("Welcome to the best recipe book in the world!");
-        
         recipeList = new ArrayList<>();
+        loadAllRecipesFromFolder("RecipeData");
+        
+   
     }
 
-    public void openBookPanel()
-    {
+    public void openBookPanel() {
         scanner = new Scanner(System.in);
-        boolean scannerOpen = true; // Create a Scanner object
         activeMenu = true;
-        
-        String userInput = "";
-        while (activeMenu)
-        {
-            System.out.println("Write ''Quit'' to quit");
-            System.out.println("create recipe? (Yes or No)");
-            userInput = scanner.nextLine();
-            if (userInput.toLowerCase().equals("yes"))
-            {
-                
-                scannerOpen = false;
-                createRecipe();
-                
-                
-            } else 
-            {   
-                if (userInput.toLowerCase().equals("quit")) {activeMenu = false;}
-                else {
-                    System.out.println("Alright!");
-                }
+
+        while (activeMenu) {
+
+            System.out.println("\n===== RECIPE BOOK MENU =====");
+            System.out.println("1. Create new recipe");
+            System.out.println("2. List all recipes");
+            System.out.println("3. Open a recipe");
+            System.out.println("4. Quit");
+            System.out.println("Choose an option (1-4):");
+
+            String choice = scanner.nextLine().trim();
+
+            switch (choice) {
+
+                case "1":
+                    createRecipe();
+                    break;
+
+                case "2":
+                    printRecipes();
+                    break;
+
+                case "3":
+                    openRecipeByName();
+                    break;
+
+                case "4":
+                case "quit":
+                case "QUIT":
+                    activeMenu = false;
+                    System.out.println("Closing Recipe Book...");
+                    break;
+
+                default:
+                    System.out.println("Invalid option. Please enter 1–4.");
+                    break;
             }
-            
+        }
+    }
+
+    private void openRecipeByName() {
+        System.out.println("Enter recipe name:");
+        String name = scanner.nextLine().trim();
+
+        boolean found = false;
+
+        for (Recipe recipe : recipeList) {
+            if (recipe.recipeName.equalsIgnoreCase(name)) {
+                System.out.println("\n=== " + recipe.recipeName + " ===");
+                recipe.printIngredients();
+                recipe.printInstructions();
+                found = true;
+                break;
+            }
         }
 
-        
-        
+        if (!found) {
+            System.out.println("Recipe '" + name + "' not found.");
+        }
     }
+
 
 
 
@@ -73,21 +111,158 @@ public class RecipeBook
     }
     
     public void printRecipes()//shows all added recipes in the terminal
-    {
+    {   
+        int index = 1;
+        System.out.println("""
+                ------Recipe List------
+            """);
+
         for(Recipe recipe : recipeList)
         {
-            System.out.println(recipe.recipeName);
+            System.out.println(index + ") " + recipe.recipeName);
+            index++;
         }
     }
 
+    public void loadAllRecipesFromFolder(String folderName) {
+        File folder = new File(folderName);
+
+        if (!folder.exists() || !folder.isDirectory()) {
+            System.out.println("Folder not found: " + folderName);
+            return;
+        }
+
+        File[] files = folder.listFiles((dir, name) -> name.endsWith(".txt"));
+        if (files == null || files.length == 0) {
+            System.out.println("No recipe files found.");
+            return;
+        }
+
+        for (File file : files) {
+            loadSingleRecipe(file);
+        }
+
+        System.out.println("Loaded " + recipeList.size() + " recipes.");
+    }
+
+    private void loadSingleRecipe(File file) {
+        try (Scanner sc = new Scanner(file)) {
+
+            String recipeName = file.getName().replace(".txt", "");
+            int id = recipeList.size() + 1;  // auto ID
+            RecipeType type = RecipeType.DISH; // default since your file doesn't store it
+
+            Recipe recipe = new Recipe(id, recipeName, type);
+            Instruction instructions = new Instruction();
+
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine().trim();
+                if (line.isEmpty()) continue;
+
+                // Ingredient format:
+                // - 1 unit of steak
+                if (line.startsWith("- ") && !line.startsWith("- -")) {
+
+                    // Remove "- "
+                    line = line.substring(2);
+
+                    // "1 unit of steak"
+                    String[] parts = line.split(" ");
+
+                    int quantity = Integer.parseInt(parts[0]);
+                    QuantityTypes qtyType = QuantityTypes.valueOf(parts[1].toUpperCase());
+
+                    // Ingredient name is everything after "of "
+                    String ingName = line.substring(line.indexOf("of ") + 3);
+
+                    recipe.addIngredient(new Ingredient(ingName, qtyType, quantity));
+                }
+
+                // Instruction format:
+                // - - 1. Cook the steak
+                else if (line.startsWith("- -")) {
+
+                    // Remove "- - "
+                    String step = line.substring(4);
+
+                    // Remove "1. " numbering
+                    if (step.matches("\\d+\\.\\s+.*")) {
+                        step = step.substring(step.indexOf(". ") + 2);
+                    }
+
+                    instructions.addStep(step);
+                }
+            }
+
+            recipe.addInstruction(instructions);
+            recipeList.add(recipe);
+
+            System.out.println("Loaded recipe: " + recipeName);
+
+        } catch (Exception e) {
+            System.out.println("Error loading file: " + file.getName());
+            e.printStackTrace();
+        }
+    }
+
+
+
     public void createRecipe()
     {
-
         System.out.println("Recipe Name?");
         String recipeName = scanner.nextLine();
         System.out.println("Is it a DISH, DRINK or DESERT");
         RecipeType type = RecipeType.valueOf(scanner.nextLine().toUpperCase());
-
+        
+        // Create recipe with auto-generated ID
+        int recipeId = recipeList.size() + 1;
+        Recipe recipe = new Recipe(recipeId, recipeName, type);
+        
+        // Collect ingredients
+        System.out.println("Add ingredients? (Yes or No)");
+        String addIngredients = scanner.nextLine();
+        String ingredientName = null;
+        QuantityTypes quantityType = null;
+        int quantity = 0;
+        Ingredient ingredient = null;
+        while (!addIngredients.toLowerCase().equals("done"))
+        {
+            System.out.println("Ingredient name?");
+            if (!addIngredients.toLowerCase().equals("done")) addIngredients = scanner.nextLine();
+            if (!addIngredients.toLowerCase().equals("done")) ingredientName = addIngredients;
+            if (!addIngredients.toLowerCase().equals("done")) System.out.println("Quantity type? (cup, teaSpoon, tableSpoon, unit, pinch)");
+            if (!addIngredients.toLowerCase().equals("done")) addIngredients = scanner.nextLine();
+            if (!addIngredients.toLowerCase().equals("done")) quantityType = QuantityTypes.valueOf(addIngredients.toUpperCase());
+            if (!addIngredients.toLowerCase().equals("done")) System.out.println("Quantity? (number)");
+            if (!addIngredients.toLowerCase().equals("done")) addIngredients = scanner.nextLine();
+            if (!addIngredients.toLowerCase().equals("done")) quantity = Integer.parseInt(addIngredients);
+            
+            if ((ingredientName != null) && (!quantityType.equals(null) ) && (quantity != 0)) ingredient = new Ingredient(ingredientName, quantityType, quantity);
+            if (ingredient != null && !addIngredients.toLowerCase().equals("done")) recipe.addIngredient(ingredient); System.out.println("Ingredient added");
+            
+        }
+        
+        // Collect instructions
+        Instruction instruction = new Instruction();
+        System.out.println("Add instructions? (Yes or No)");
+        String addInstructions = scanner.nextLine();
+        String step = null;
+        while (!addInstructions.toLowerCase().equals("done"))
+        {
+            if (!addIngredients.toLowerCase().equals("done")) System.out.println("Enter step:");
+            if (!addIngredients.toLowerCase().equals("done")) addInstructions = scanner.nextLine();
+            if (!addIngredients.toLowerCase().equals("done")) step = addInstructions;
+            if (!addIngredients.toLowerCase().equals("done") && (step != null)) instruction.addStep(step);
+            
+            
+            
+        }
+        recipe.addInstruction(instruction);
+        
+        // Add recipe to the recipe list
+        addRecipe(recipe);
+        recipe.saveRecipe();
+        System.out.println("Recipe created and added to recipe book!");
     }
 
 

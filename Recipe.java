@@ -52,7 +52,10 @@ public class Recipe
             {
                 saveInfo = saveInfo + "- " + ingredient.getIngredientText() + "\n";
             }
-
+            for (Instruction instruction: instructionList)
+            {
+                saveInfo = saveInfo + instruction.getSteps() + "\n";
+            }
             return saveInfo;
         }
         return null;
