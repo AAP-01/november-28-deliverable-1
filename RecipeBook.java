@@ -222,6 +222,7 @@ public class RecipeBook
         System.out.println("Add ingredients? (Yes or No)");
         String addIngredients = scanner.nextLine();
         String ingredientName = null;
+        String step = null;
         QuantityTypes quantityType = null;
         int quantity = 0;
         Ingredient ingredient = null;
@@ -244,15 +245,16 @@ public class RecipeBook
         
         // Collect instructions
         Instruction instruction = new Instruction();
-        System.out.println("Add instructions? (Yes or No)");
-        String addInstructions = scanner.nextLine();
-        String step = null;
+        //System.out.println("Add instructions? (Yes or No)");
+        
+        String addInstructions = "lol";
+        
         while (!addInstructions.toLowerCase().equals("done"))
         {
-            if (!addIngredients.toLowerCase().equals("done")) System.out.println("Enter step:");
-            if (!addIngredients.toLowerCase().equals("done")) addInstructions = scanner.nextLine();
-            if (!addIngredients.toLowerCase().equals("done")) step = addInstructions;
-            if (!addIngredients.toLowerCase().equals("done") && (step != null)) instruction.addStep(step);
+            if (!addInstructions.toLowerCase().equals("done")) System.out.println("Enter step:");
+            if (!addInstructions.toLowerCase().equals("done")) addInstructions = scanner.nextLine();
+            if (!addInstructions.toLowerCase().equals("done")) step = addInstructions;
+            if (!addInstructions.toLowerCase().equals("done") && (step != null)) instruction.addStep(step);
             
             
             
