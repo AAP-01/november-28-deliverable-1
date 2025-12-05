@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class RecipeBookTest.
  *
- * @author  (your name)
+ * @author  John
  * @version (a version number or a date)
  */
 public class RecipeBookTest
@@ -20,6 +20,8 @@ public class RecipeBookTest
     {
     }
 
+    private RecipeBook recipeBook;
+
     /**
      * Sets up the test fixture.
      *
@@ -28,6 +30,7 @@ public class RecipeBookTest
     @BeforeEach
     public void setUp()
     {
+        recipeBook = new RecipeBook("Test Recipe Book", "Test Author", 2024);
     }
 
     /**
@@ -35,8 +38,16 @@ public class RecipeBookTest
      *
      * Called after every test case method.
      */
-    @AfterEach
-    public void tearDown()
+
+
+    @Test
+    public void testRecipeBookConstructor()
     {
+        RecipeBook book = new RecipeBook("My Recipes", "John Doe", 2024);
+        assertNotNull(book);
+        assertNotNull(book.recipeList);
     }
+
+
+
 }

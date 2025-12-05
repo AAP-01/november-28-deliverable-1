@@ -2,7 +2,7 @@
 /**
  * Enumeration class QuantityTypes - write a description of the enum class here
  *
- * @author (your name here)
+ * @author John
  * @version (version number or date here)
  */
 public enum QuantityTypes

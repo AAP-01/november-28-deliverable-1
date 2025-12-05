@@ -5,6 +5,12 @@ import java.io.IOException; // Import IOException to handle errors
 import java.io.FileWriter;   // Import the FileWriter class
 import java.io.IOException;  // Import the IOException class
 
+/**
+ * Write a description of class RecipeBook here.
+ *
+ * @author Daniel
+ * @version (a version number or a date)
+ */
 public class RecipeBook
 {
     ArrayList<Recipe> recipeList;

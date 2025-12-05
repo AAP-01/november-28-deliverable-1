@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Write a description of class Instruction here.
  *
- * @author (your name)
+ * @author John
  * @version (a version number or a date)
  */
 public class Instruction

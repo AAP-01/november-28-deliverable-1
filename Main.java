@@ -1,3 +1,9 @@
+/**
+ * Write a description of class Main here.
+ *
+ * @author Daniel
+ * @version (a version number or a date)
+ */
 public class Main {
 
     public static void main(String[] arg) {

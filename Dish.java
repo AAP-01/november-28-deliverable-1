@@ -1,5 +1,10 @@
 
-
+/**
+ * Write a description of class Dish here.
+ *
+ * @author John
+ * @version (a version number or a date)
+ */
 public class Dish extends Recipe
 {
     boolean isVegeterian;

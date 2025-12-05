@@ -1,4 +1,9 @@
-
+/**
+ * Write a description of class Ingredient here.
+ *
+ * @author Daniel
+ * @version (a version number or a date)
+ */
 public class Ingredient
 {
     String name;
