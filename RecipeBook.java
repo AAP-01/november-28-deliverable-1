@@ -81,6 +81,7 @@ public class RecipeBook
         for (Recipe recipe : recipeList) {
             if (recipe.recipeName.equalsIgnoreCase(name)) {
                 System.out.println("=== " + recipe.recipeName + " ===");
+                recipe.printDetails();
                 recipe.printIngredients();
                 recipe.printInstructions();
                 found = true;
@@ -92,9 +93,6 @@ public class RecipeBook
             System.out.println("Recipe '" + name + "' not found.");
         }
     }
-
-
-
 
     public void addRecipe(Recipe recipe)
     {
@@ -210,8 +208,6 @@ public class RecipeBook
             e.printStackTrace();
         }
     }
-
-
 
     public void createRecipe()
     {

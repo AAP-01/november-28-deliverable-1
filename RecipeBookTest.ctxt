@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=RecipeBookTest
-comment0.text=\r\n\ The\ test\ class\ RecipeBookTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ The\ test\ class\ RecipeBookTest.\r\n\r\n\ @author\ \ John\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=RecipeBookTest()
 comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ RecipeBookTest\r\n

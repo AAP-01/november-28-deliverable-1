@@ -14,6 +14,7 @@ public class Recipe
 {
     ArrayList<Ingredient> ingredientList;
     ArrayList<Instruction> instructionList;
+    ArrayList<Detail> detailsList;
     public String recipeName;
     int id;//not relevant to user, for reference to us
     RecipeType recipeTypes;
@@ -45,6 +46,17 @@ public class Recipe
             for (Instruction instruction: instructionList)
             {
                 instruction.printSteps();
+            }
+        }
+    }
+    
+    public void printDetails()//recipe book uses this
+    {
+        if (detailsList != null)
+        {
+            for (Detail detail: detailsList)
+            {
+                detail.printSteps();
             }
         }
     }
