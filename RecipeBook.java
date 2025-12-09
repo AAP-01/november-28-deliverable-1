@@ -80,7 +80,7 @@ public class RecipeBook
 
         for (Recipe recipe : recipeList) {
             if (recipe.recipeName.equalsIgnoreCase(name)) {
-                System.out.println("\n=== " + recipe.recipeName + " ===");
+                System.out.println("=== " + recipe.recipeName + " ===");
                 recipe.printIngredients();
                 recipe.printInstructions();
                 found = true;
@@ -286,7 +286,6 @@ public class RecipeBook
         
         
         // Collect ingredients
-        System.out.println("Add ingredients? (Yes or No)");
         String addIngredients = scanner.nextLine();
         String ingredientName = null;
         String step = null;
@@ -316,7 +315,7 @@ public class RecipeBook
         //System.out.println("Add instructions? (Yes or No)");
         
         String addInstructions = "lol";
-        
+        System.out.println("Add Instructions. 'Done' to complete");
         while (!addInstructions.toLowerCase().equals("done"))
         {
             if (!addInstructions.toLowerCase().equals("done")) System.out.println("Enter step:");
