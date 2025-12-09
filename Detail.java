@@ -16,7 +16,7 @@ public class Detail
         detailsList = new ArrayList<>();
     }
     
-    public void printSteps()//shows the added steps in terminal
+    public void printDetails()//shows the added steps in terminal
     {
         int index = 1;
         for(String detail : detailsList)
@@ -26,7 +26,7 @@ public class Detail
         }
     }
     
-    public String getSteps()
+    public String getDetails()
     {
         int index = 1;
         String info = "";
@@ -36,6 +36,14 @@ public class Detail
             index++;
         }
         return info;
+        
+        // for(Detail detail : detailsList)
+        // {
+            // if(desert.isFrozen)
+            // {
+                
+            // }
+        // }
     }
 
     public void addDetail(String step, int index)//add a step in a particular position (ie manually)
@@ -43,9 +51,9 @@ public class Detail
         detailsList.add(index, step);
     }
 
-    public void addDetail(String step)
+    public void addDetail(String detail)
     {
-        detailsList.add(step);
+        detailsList.add(detail);
     }
 
     public void removeDetail(int index)

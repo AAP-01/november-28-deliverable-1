@@ -56,7 +56,7 @@ public class Recipe
         {
             for (Detail detail: detailsList)
             {
-                detail.printSteps();
+                detail.printDetails();
             }
         }
     }
