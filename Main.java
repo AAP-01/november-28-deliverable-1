@@ -7,7 +7,7 @@
 public class Main {
 
     public static void main(String[] arg) {
-        RecipeBook start = new RecipeBook("food", "Dan", 2008);
+        RecipeBook start = new RecipeBook("Recipe Book-inator 3000", "By Dan and John", 2008);
         start.openBookPanel();
         // Desert start = new Desert(1, "Cake");
         // start.addIngredient(new Ingredient("Sugar", QuantityTypes.tableSpoon, 3));
