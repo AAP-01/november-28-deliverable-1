@@ -81,9 +81,13 @@ public class RecipeBook
         for (Recipe recipe : recipeList) {
             if (recipe.recipeName.equalsIgnoreCase(name)) {
                 System.out.println("=== " + recipe.recipeName + " ===");
+                System.out.println("\n== " + "Ingredients" + " ==");
                 recipe.printIngredients();
+                System.out.println("\n== " + "Instructions" + " ==");
                 recipe.printInstructions();
                 found = true;
+                System.out.println("\nPress 'Enter' to Continue..");
+                scanner.nextLine();
                 break;
             }
         }
