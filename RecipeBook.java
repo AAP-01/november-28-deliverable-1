@@ -215,14 +215,75 @@ public class RecipeBook
 
     public void createRecipe()
     {
+        RecipeType recipeType = null;
         System.out.println("Recipe Name?");
         String recipeName = scanner.nextLine();
-        System.out.println("Is it a DISH, DRINK or DESERT");
-        RecipeType type = RecipeType.valueOf(scanner.nextLine().toUpperCase());
-        
+        Recipe recipe = null;
+        boolean isCorrect = false;
         // Create recipe with auto-generated ID
         int recipeId = recipeList.size() + 1;
-        Recipe recipe = new Recipe(recipeId, recipeName, type);
+        while (!isCorrect)
+        {
+            System.out.println("Is it a DISH, DRINK or DESERT");
+
+            try
+            {
+                recipeType = RecipeType.valueOf(scanner.nextLine());
+            } catch (Exception e) {
+                recipeType = RecipeType.NULL;
+            }
+            
+            
+            switch (recipeType)
+            {
+                case DISH : {
+                    isCorrect = true;
+                    System.out.println("Is it vegeterian? (true, false)");
+                    boolean isVegeterian = scanner.nextBoolean();
+                    try {
+                        recipe = new Dish(recipeId, recipeName, recipeType, isVegeterian); 
+                    } catch (Exception e) {
+                        recipe = new Dish(recipeId, recipeName, recipeType, false);
+                        System.out.println("error, vegeterian set to false");
+                    }
+                    
+                    break;
+                    }
+                
+                case DESERT : 
+
+                    isCorrect = true;
+                    System.out.println("Is it frozen? (true, false)");
+                    boolean isFrozen = scanner.nextBoolean();
+                    try {
+                        recipe = new Desert(recipeId, recipeName, recipeType, isFrozen); 
+                    } catch (Exception e) {
+                        recipe = new Desert(recipeId, recipeName, recipeType, false);
+                        System.out.println("error, frozen set to false");
+                    }
+                    break;
+
+                case DRINK :
+
+                    isCorrect = true;
+                    System.out.println("Is it hot? (true, false)");
+                    boolean isHot = scanner.nextBoolean();
+                    System.out.println("Is it alcoholic? (true, false)");
+                    boolean isAlcoholic = scanner.nextBoolean();
+                    try {
+                        recipe = new Drink(recipeId, recipeName, recipeType, isAlcoholic, isHot); 
+                    } catch (Exception e) {
+                        recipe = new Drink(recipeId, recipeName, recipeType, false, false);
+                        System.out.println("error, hot and alcoholic set to false");
+                    }
+             
+                    break;
+
+                default : isCorrect = false; System.out.println("ERROR: RETRY"); break;
+            }
+        }
+
+        
         
         // Collect ingredients
         System.out.println("Add ingredients? (Yes or No)");
@@ -239,6 +300,7 @@ public class RecipeBook
             if (!addIngredients.toLowerCase().equals("done")) ingredientName = addIngredients;
             if (!addIngredients.toLowerCase().equals("done")) System.out.println("Quantity type? (cup, teaSpoon, tableSpoon, unit, pinch)");
             if (!addIngredients.toLowerCase().equals("done")) addIngredients = scanner.nextLine();
+            
             if (!addIngredients.toLowerCase().equals("done")) quantityType = QuantityTypes.valueOf(addIngredients.toUpperCase());
             if (!addIngredients.toLowerCase().equals("done")) System.out.println("Quantity? (number)");
             if (!addIngredients.toLowerCase().equals("done")) addIngredients = scanner.nextLine();
@@ -273,5 +335,5 @@ public class RecipeBook
         System.out.println("Recipe created and added to recipe book!");
     }
 
-
+    
 }

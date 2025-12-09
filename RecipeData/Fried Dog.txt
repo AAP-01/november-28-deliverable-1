@@ -1,8 +1,9 @@
 - 1 UNIT of Dog
 - 3 TABLESPOON of oil
 - 1 PINCH of salt
-- -1. acquire the dog
+- -1. kill the dog
 - -2. fry the dog
 - -3. consume the dog
+- -4. Here you have KFC
 
 

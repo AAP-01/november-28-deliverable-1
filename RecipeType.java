@@ -7,5 +7,5 @@
  */
 public enum RecipeType
 {
-    DISH, DESERT, DRINK
+    DISH, DESERT, DRINK, NULL
 }
