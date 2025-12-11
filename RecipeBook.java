@@ -21,7 +21,7 @@ public class RecipeBook
     
     /**
      * This constructor sets the cover page of the recipe book with the title, author(s), the 
-     * year of publication, and a short description/
+     * year of publication, and a short description.
      * @param title The title of the book.
      * @param author The author of the book.
      * @param year The year of publication.

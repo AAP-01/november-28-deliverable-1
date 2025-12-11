@@ -35,6 +35,7 @@ public class Recipe
         instructionList = new ArrayList<>();
         //System.out.println("Created: " + recipeName + ", ID: " + id);
     }
+    
     /**
      * Getter for the recipe's details (details based on the recipe type).
      */
@@ -56,7 +57,6 @@ public class Recipe
     {
         this.detail = this.detail + "\n# " + detail;
     }
-
 
     /**
      * printIngredients() prints out all the added ingredients in the ingredientList. 
