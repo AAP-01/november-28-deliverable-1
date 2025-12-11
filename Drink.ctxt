@@ -3,4 +3,5 @@ comment0.target=Drink
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Drink\ here.\r\n\r\n\ @author\ John\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=id\ recipeName\ isAlcoholic\ isHot
 comment1.target=Drink(int,\ java.lang.String,\ boolean,\ boolean)
+comment1.text=\r\n\ This\ constructor\ gets\ the\ ID,\ name,\ and\ recipe\ type\ of\ the\ recipe\ (a\ DRINK).\ \r\n\ It\ also\ sets\ the\ alcoholic\ and\ hot\ characteristic\ of\ the\ drink.\r\n\ @param\ id\ The\ ID\ of\ a\ recipe.\ For\ developer\ use.\r\n\ @param\ recipeName\ The\ name\ of\ the\ recipe.\r\n\ @param\ isAlcoholic\ Whether\ the\ recipe\ is\ alcoholic\ or\ not.\r\n\ @param\ isHot\ Whether\ the\ recipe\ is\ hot\ or\ not.\r\n
 numComments=2
