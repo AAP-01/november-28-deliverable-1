@@ -19,6 +19,13 @@ public class Recipe
     int id;//not relevant to user, for reference to us
     RecipeType recipeTypes;
 
+    /**
+     * This constructor sets the relevant information for a recipe. It creates the ArrayLists 
+     * for the ingredients and instructions.
+     * @param id The ID of a recipe. For developer use.
+     * @param recipeName The name of the recipe.
+     * @param recipeTypes The type of the recipe (DISH, DRINK, or DESERT).
+     */
     public Recipe(int id, String recipeName, RecipeType recipeTypes)
     {
         this.id = id;
@@ -28,11 +35,18 @@ public class Recipe
         instructionList = new ArrayList<>();
         //System.out.println("Created: " + recipeName + ", ID: " + id);
     }
+    /**
+     * Getter for the recipe's details (details based on the recipe type).
+     */
     public String getDetail() 
     {
         return detail;
     }
 
+    /**
+     * Setter for details when generating a txt file.
+     * @param detail A detail.
+     */
     public void setDetail(String detail)
     {
         this.detail = "# " + detail;
@@ -44,6 +58,11 @@ public class Recipe
     }
 
 
+    /**
+     * printIngredients() prints out all the added ingredients in the ingredientList. 
+     * searchAndOpenRecipe(String name) from RecipeBook uses this to print the ingredients of 
+     * the requested recipe.
+     */
     public void printIngredients()//recipe book uses this
     {
         if (ingredientList != null)
@@ -55,6 +74,11 @@ public class Recipe
         }
     }
 
+    /**
+     * printInstructions() prints out all the added instructions in the instructionList. 
+     * searchAndOpenRecipe(String name) from RecipeBook uses this to print the instructions of 
+     * the requested recipe.
+     */
     public void printInstructions()//recipe book uses this
     {
         if (instructionList != null)
@@ -66,6 +90,10 @@ public class Recipe
         }
     }
     
+    /**
+     * printDetails() prints out all the added details. searchAndOpenRecipe(String name) from 
+     * RecipeBook uses this to print the details of the requested recipe.
+     */
     public void printDetails()//recipe book uses this
     {
         System.out.println(recipeTypes);
@@ -73,9 +101,11 @@ public class Recipe
         System.out.println(detail);
     }
 
+    /**
+     * saveIngredients() saves the ingredients onto the txt file of the recipe.
+     */
     private String saveIngredients()//for vscode functionality(?)
     {
-        
         if (ingredientList == null) return "";
         String saveInfo = "";
         saveInfo = saveInfo + "^ " + String.valueOf(recipeTypes);
@@ -102,7 +132,9 @@ public class Recipe
         instructionList.add(instruction);
     }
 
-
+    /**
+     * saveRecipe() saves the recipe onto a txt file.
+     */
     public void saveRecipe()//ignore, for vscode functionality
     {
         try {
