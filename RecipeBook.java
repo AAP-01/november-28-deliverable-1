@@ -19,7 +19,13 @@ public class RecipeBook
     String sep = "-";
     String line = "";
     
-
+    /**
+     * This constructor sets the cover page of the recipe book with the title, author(s), the 
+     * year of publication, and a short description/
+     * @param title The title of the book.
+     * @param author The author of the book.
+     * @param year The year of publication.
+     */
     public RecipeBook(String title, String author, int year)
     {
         for (int i = 0; i <= title.length(); i ++) 
@@ -40,6 +46,9 @@ public class RecipeBook
    
     }
 
+    /**
+     * openBookPanel() sets up the menu for the recipe book.
+     */
     public void openBookPanel() {
         scanner = new Scanner(System.in);
         activeMenu = true;
@@ -83,6 +92,9 @@ public class RecipeBook
         }
     }
 
+    /**
+     * openRecipeByName() runs when the user chooses option 3 (Open a recipe).
+     */
     private void openRecipeByName() {
         System.out.println("Enter recipe name:");
         String name = scanner.nextLine().trim();
@@ -115,6 +127,9 @@ public class RecipeBook
         recipeList.add(recipe);
     }
     
+    /**
+     * openRecipeByName() uses this method to search and open the inputted recipe.
+     */
     public void searchAndOpenRecipe(String name)
     {
         if(!recipeList.isEmpty())
@@ -131,6 +146,9 @@ public class RecipeBook
         }
     }
     
+    /**
+     * printRecipes() runs when the user chooses option 2 (List all recipes).
+     */
     public void printRecipes()//shows all added recipes in the terminal
     {   
         int index = 1;
@@ -145,6 +163,11 @@ public class RecipeBook
         }
     }
 
+    /**
+     * loadAllRecipesFromFolder(String folderName) uses loadSingleRecipe(File file) to work on 
+     * all recipes.
+     * @param folderName The name of the txt file.
+     */
     public void loadAllRecipesFromFolder(String folderName) {
         File folder = new File(folderName);
 
@@ -166,6 +189,9 @@ public class RecipeBook
         System.out.println("Loaded " + recipeList.size() + " recipes.");
     }
 
+    /**
+     * loadSingleRecipe(File file) looks at a txt file's information to copy onto the console.
+     */
     private void loadSingleRecipe(File file) {
         try (Scanner sc1 = new Scanner(file); Scanner sc2 = new Scanner(file); Scanner sc3 = new Scanner(file) ) {
 
@@ -354,6 +380,13 @@ public class RecipeBook
         }
     }
 
+    /**
+     * createRecipe() runs when the user chooses option 1 (Create new recipe). it asks the user 
+     * the name, the recipe type (DISH, DRINK, or Desert), specific configurations depending 
+     * on the type, the ingredients, and the instructions. Typing "done" will skip the current 
+     * step.
+     * 
+     */
     public void createRecipe()
     {
         RecipeType recipeType = null;
