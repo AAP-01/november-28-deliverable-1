@@ -1,5 +1,6 @@
 ^ DRINK
-# hot false alcoholic true
+# hot false 
+# alcoholic true
 
 - 1 unit of lime
 - 2 tableSpoon of sugar

@@ -1,5 +1,6 @@
 ^ DRINK
-# hot false alcoholic false
+# hot false 
+# alcoholic false
 
 - 1 cup of milk
 - 2 cup of strawberries

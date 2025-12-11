@@ -1,5 +1,6 @@
 ^ DRINK
-# hot true alcoholic false
+# hot true 
+# alcoholic false
 
 - 2 cup of milk
 - 2 tableSpoon of cocoa_powder

@@ -1,5 +1,6 @@
 ^ DRINK
-# hot false alcoholic false
+# hot false 
+# alcoholic false
 
 - 2 unit of green_tea_bags
 - 3 cup of water
