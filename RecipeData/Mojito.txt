@@ -1,0 +1,15 @@
+^ DRINK
+# hot false alcoholic true
+
+- 1 unit of lime
+- 2 tableSpoon of sugar
+- 5 unit of mint_leaves
+- 1 cup of sparkling_water
+- 1 cup of rum
+- 1 cup of ice
+
+- - 1. Cut lime into wedges and muddle with sugar.
+- - 2. Add mint leaves and gently press them.
+- - 3. Add rum and stir.
+- - 4. Fill glass with ice.
+- - 5. Top with sparkling water and mix lightly.

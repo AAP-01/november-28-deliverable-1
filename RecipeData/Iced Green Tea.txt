@@ -1,0 +1,12 @@
+^ DRINK
+# hot false alcoholic false
+
+- 2 unit of green_tea_bags
+- 3 cup of water
+- 1 tableSpoon of honey
+- 1 cup of ice
+
+- - 1. Heat water until steaming but not boiling.
+- - 2. Steep tea bags for 3 minutes.
+- - 3. Remove bags and stir in honey.
+- - 4. Pour over ice and serve cold.

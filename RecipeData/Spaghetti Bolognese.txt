@@ -1,0 +1,18 @@
+^ DISH
+# vegeterian false
+
+- 200 unit of spaghetti
+- 1 unit of onion
+- 2 unit of garlic
+- 300 unit of minced_beef
+- 1 cup of tomato_sauce
+- 1 teaSpoon of salt
+- 1 teaSpoon of pepper
+
+- - 1. Boil the spaghetti until al dente.
+- - 2. Chop the onion and garlic.
+- - 3. Fry onion and garlic until golden.
+- - 4. Add minced beef and cook thoroughly.
+- - 5. Pour in tomato sauce and simmer for 10 minutes.
+- - 6. Season with salt and pepper.
+- - 7. Mix sauce with spaghetti and serve warm.

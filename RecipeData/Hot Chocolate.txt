@@ -1,0 +1,12 @@
+^ DRINK
+# hot true alcoholic false
+
+- 2 cup of milk
+- 2 tableSpoon of cocoa_powder
+- 1 tableSpoon of sugar
+- 1 pinch of salt
+
+- - 1. Heat milk in a pot.
+- - 2. Whisk in cocoa powder, sugar, and salt.
+- - 3. Stir until smooth and hot.
+- - 4. Pour into a mug and serve warm.

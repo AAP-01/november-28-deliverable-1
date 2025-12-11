@@ -1,0 +1,15 @@
+^ DESERT
+# frozen false
+
+- 1 cup of flour
+- 1 cup of sugar
+- 1 unit of egg
+- 1 cup of butter
+- 1 teaSpoon of vanilla_extract
+- 1 teaSpoon of baking_powder
+
+- - 1. Cream butter and sugar together.
+- - 2. Add egg and vanilla extract.
+- - 3. Mix in flour and baking powder.
+- - 4. Pour into cupcake molds.
+- - 5. Bake at 175C for 20 minutes.

@@ -10,6 +10,7 @@ public class Detail
 {
     String detail;
     ArrayList<String> detailsList;
+    
 
     public Detail()
     {
@@ -19,11 +20,7 @@ public class Detail
     public void printSteps()//shows the added steps in terminal
     {
         int index = 1;
-        for(String detail : detailsList)
-        {
-            System.out.println(index + ". " + detail.replace(".", ""));
-            index++;
-        }
+        
     }
     
     public String getSteps()
@@ -38,10 +35,7 @@ public class Detail
         return info;
     }
 
-    public void addDetail(String step, int index)//add a step in a particular position (ie manually)
-    {
-        detailsList.add(index, step);
-    }
+
 
     public void addDetail(String step)
     {

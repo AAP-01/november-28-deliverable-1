@@ -14,8 +14,8 @@ public class Recipe
 {
     ArrayList<Ingredient> ingredientList;
     ArrayList<Instruction> instructionList;
-    ArrayList<Detail> detailsList;
     public String recipeName;
+    public String detail = "";
     int id;//not relevant to user, for reference to us
     RecipeType recipeTypes;
 
@@ -23,11 +23,27 @@ public class Recipe
     {
         this.id = id;
         this.recipeName = recipeName;
+        this.recipeTypes = recipeTypes;
         ingredientList = new ArrayList<>();
         instructionList = new ArrayList<>();
-        System.out.println("Created: " + recipeName + ", ID: " + id);
+        //System.out.println("Created: " + recipeName + ", ID: " + id);
     }
-    
+    public String getDetail() 
+    {
+        return detail;
+    }
+
+    public void setDetail(String detail)
+    {
+        this.detail = "# " + detail;
+    }
+
+    public void addDetail(String detail)
+    {
+        this.detail = this.detail + "\n# " + detail;
+    }
+
+
     public void printIngredients()//recipe book uses this
     {
         if (ingredientList != null)
@@ -52,31 +68,28 @@ public class Recipe
     
     public void printDetails()//recipe book uses this
     {
-        if (detailsList != null)
-        {
-            for (Detail detail: detailsList)
-            {
-                detail.printSteps();
-            }
-        }
+        System.out.println(recipeTypes);
+        System.out.println("___________________");
+        System.out.println(detail);
     }
-    
+
     private String saveIngredients()//for vscode functionality(?)
     {
-        if (ingredientList != null)
+        
+        if (ingredientList == null) return "";
+        String saveInfo = "";
+        saveInfo = saveInfo + "^ " + String.valueOf(recipeTypes);
+        System.out.println(String.valueOf(recipeTypes));
+        saveInfo = saveInfo + detail + "\n";
+        for (Ingredient ingredient: ingredientList)
         {
-            String saveInfo = "";
-            for (Ingredient ingredient: ingredientList)
-            {
-                saveInfo = saveInfo + "- " + ingredient.getIngredientText() + "\n";
-            }
-            for (Instruction instruction: instructionList)
-            {
-                saveInfo = saveInfo + instruction.getSteps() + "\n";
-            }
-            return saveInfo;
+            saveInfo = saveInfo + "- " + ingredient.getIngredientText() + "\n";
         }
-        return null;
+        for (Instruction instruction: instructionList)
+        {
+            saveInfo = saveInfo + instruction.getSteps() + "\n";
+        }
+        return saveInfo;
     }
 
     public void addIngredient(Ingredient ingredient)//adds an ingredient object (contains one ingredient)
@@ -88,6 +101,7 @@ public class Recipe
     {
         instructionList.add(instruction);
     }
+
 
     public void saveRecipe()//ignore, for vscode functionality
     {

@@ -1,0 +1,12 @@
+^ DRINK
+# hot false alcoholic false
+
+- 1 cup of milk
+- 2 cup of strawberries
+- 1 cup of vanilla_ice_cream
+- 1 tableSpoon of sugar
+
+- - 1. Add strawberries, milk, and ice cream into a blender.
+- - 2. Blend until smooth.
+- - 3. Add sugar if needed and blend again.
+- - 4. Serve chilled.

@@ -9,9 +9,9 @@ public class Drink extends Recipe
 {
     boolean isAlcoholic;
     boolean isHot;
-    public Drink(int id, String recipeName, RecipeType recipeTypes, boolean isAlcoholic, boolean isHot)
+    public Drink(int id, String recipeName, boolean isAlcoholic, boolean isHot)
     {
-        super(id, recipeName, recipeTypes);
+        super(id, recipeName, RecipeType.DRINK);
         this.isAlcoholic = isAlcoholic;
         this.isHot = isHot;
     }

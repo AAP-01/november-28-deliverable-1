@@ -9,9 +9,9 @@ public class Dish extends Recipe
 {
     boolean isVegeterian;
 
-    public Dish(int id, String recipeName, RecipeType recipeTypes, boolean isVegeterian)
+    public Dish(int id, String recipeName, boolean isVegeterian)
     {
-        super(id, recipeName, recipeTypes);
+        super(id, recipeName, RecipeType.DISH);
         this.isVegeterian = isVegeterian;
     }
 }

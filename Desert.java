@@ -9,9 +9,9 @@ public class Desert extends Recipe
 {
     boolean isFrozen;
     
-    public Desert(int id, String recipeName, RecipeType recipeTypes, boolean isFrozen)
+    public Desert(int id, String recipeName, boolean isFrozen)
     {
-        super(id, recipeName, recipeTypes);
+        super(id, recipeName, RecipeType.DESERT);
         this.isFrozen = isFrozen;
     }
 }

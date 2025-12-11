@@ -1,0 +1,16 @@
+^ DESERT
+# frozen false
+
+- 2 cup of flour
+- 1 cup of sugar
+- 1 cup of cocoa_powder
+- 1 cup of milk
+- 2 unit of eggs
+- 1 teaSpoon of baking_powder
+- 1 pinch of salt
+
+- - 1. Mix all dry ingredients.
+- - 2. Whisk eggs and milk together.
+- - 3. Combine wet and dry mixtures.
+- - 4. Pour into a baking pan.
+- - 5. Bake at 180C for 30 minutes.
