@@ -17,18 +17,22 @@ public class RecipeBook
     boolean activeMenu;
     Scanner scanner;
     String sep = "-";
+    String line = "";
     
 
     public RecipeBook(String title, String author, int year)
     {
-        //for (int i = 0; i <= title.length(; i ++)) {sep}
-        System.out.println("-");
+        for (int i = 0; i <= title.length(); i ++) 
+        {
+            line = line + sep;
+        }
+        System.out.println(line);
         System.out.println(title);
-        System.out.println("-------------");
+        System.out.println(line);
         System.out.println(author);
-        System.out.println("-------------");
+        System.out.println(line);
         System.out.println(year);
-        System.out.println("-------------");
+        System.out.println(line);
         System.out.println("Welcome to the best recipe book in the world!");
         recipeList = new ArrayList<>();
         loadAllRecipesFromFolder("RecipeData");
